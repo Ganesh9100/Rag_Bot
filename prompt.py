@@ -37,7 +37,32 @@ agent = Agent(
 )
 
 
+import json
 
+def generate_plan_data():
+    plans = [
+        {
+            "name": "Silver Plan",
+            "price": "$30",
+            "data": "20GB 5G",
+            "hotspot": "No Hotspot",
+            "features": ["Basic Streaming", "Unlimited Calls", "100 SMS"]
+        },
+        {
+            "name": "Golden Plan",
+            "price": "$25",
+            "data": "10GB 5G",
+            "hotspot": "No Hotspot",
+            "features": ["Standard Streaming", "Unlimited Calls", "500 SMS"]
+        },
+        {
+            "name": "Platinum Plan",
+            "price": "$45",
+            "data": "Unlimited 5G",
+            "hotspot": "Unlimited Hotspot",
+            "features": ["Premium Streaming", "Unlimited Calls", "Unlimited SMS", "International Roaming"]
+        }
+    ]
+    return json.dumps(plans, indent=4)
 
- send = ["plan 1 : 30 dollar 20GB 5g and no hostspot","plan 2:25 dollar limited 10 gb 5g and no hostpot",
-            "plan 3: 45 dollar unlimited 5g and unlimited hotspot"]
+print(generate_plan_data())
