@@ -35,3 +35,9 @@ agent = Agent(
     num_history_responses=3,
     storage=SqliteAgentStorage(table_name="agent_tools", db_file="tmp/tupdate.db")
 )
+
+
+
+
+ send = ["plan 1 : 30 dollar 20GB 5g and no hostspot","plan 2:25 dollar limited 10 gb 5g and no hostpot",
+            "plan 3: 45 dollar unlimited 5g and unlimited hotspot"]
